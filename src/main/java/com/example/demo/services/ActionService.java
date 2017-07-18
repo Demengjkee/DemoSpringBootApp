@@ -44,12 +44,7 @@ class DemoThread implements Runnable {
         BasicConfigurator.configure();
         log.debug("Thread created, sleeping for 30 seconds");
         try {
-            try {
-                Thread.sleep(30000);
-            }
-            catch (InterruptedException e) {
-                throw e;
-            }
+            Thread.sleep(30000);
         } catch (InterruptedException e) {
             log.warn(e.getMessage());
             log.debug(e.getStackTrace());
